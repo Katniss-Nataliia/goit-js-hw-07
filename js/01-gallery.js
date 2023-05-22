@@ -25,7 +25,7 @@ function createMarkUp(images){
 
 createMarkUpEl.addEventListener("click", ()=>{
   const instance = basicLightbox.create(`
-  <img src="${item.preview}" width="800" height="600">`)
+  <img src="${item.preview}">`)
 
 instance.show()
 })
