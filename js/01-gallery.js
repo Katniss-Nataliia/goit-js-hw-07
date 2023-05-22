@@ -23,9 +23,10 @@ function createMarkUp(images){
   ).join("")
 }
 
-
-const instance = basicLightbox.create(`
-    <img src="${item.preview}" width="800" height="600">
-`)
+createMarkUpEl.addEventListener("click", ()=>{
+  const instance = basicLightbox.create(`
+  <img src="${item.preview}" width="800" height="600">`)
 
 instance.show()
+})
+
