@@ -23,10 +23,11 @@ function createMarkUp(images){
   ).join("")
 }
 
-createMarkUpEl.addEventListener("click", ()=>{
+galleryEl.addEventListener("click", createBasicLB);
+
+function createBasicLB(event){
+  console.log(event.target.dataset.source)
   const instance = basicLightbox.create(`
-  <img src="${item.preview}">`)
-
+  <img src="${event.target.dataset.source}" width="80" height ="600">`)
 instance.show()
-})
-
+}
