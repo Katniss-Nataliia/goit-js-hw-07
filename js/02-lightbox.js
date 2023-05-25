@@ -18,11 +18,13 @@ function createMarkUp(images){
 
 galleryEl.addEventListener("click", createSimpleLB);
 
-function createSimpleLB(event){
-    console.log(event.target.dataset.source);
-    let gallery = new SimpleLightbox('.gallery a');
-    gallery.on('show.simplelightbox', function () {
-    });
-    
-
+function createSimpleLB(event) {
+  console.log(event.target.dataset.source);
+  let gallery = new SimpleLightbox('.gallery a');
+  gallery.on('show.simplelightbox', function () {
+    captionSelector: "img";
+    captionsData: 'alt';
+    captionDelay: '250';
+    captionPosition:'bottom';
+  });
 }
